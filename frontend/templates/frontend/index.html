@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+          integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5"
+          crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+    <style>
+      ::selection {
+        color: blue;
+        background: yellow;
+      }
+    </style>
+</head>
+
+<body>
+<div id="root">Loading...</div>
+<a href="{% url 'task1-annotation' %}">See task1 annotations</a>
+{% load static %}
+<script src="{% static 'frontend/main.js' %}"></script>
+</body>
+</html>
+{% csrf_token %}
+<script>
+const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+</script>

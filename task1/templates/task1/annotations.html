@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+    <style>
+      ::selection {
+        color: blue;
+        background: yellow;
+      }
+    </style>
+<body>
+<h1>Annotations</h1>
+<hr>
+<div className="Annotations-content">
+    {% for annotation in annotations %}
+    <p>Selected Text: {{annotation.selected_text}}</p>
+    <p>{{annotation.annotation}}</p>
+    <p>{{annotation.date_time}}</p>
+    <hr>
+    {% endfor %}
+</div>
+</body>
+</head>
+</html>
